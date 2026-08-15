@@ -118,5 +118,26 @@ export const PROJECTS: Project[] = [
     ],
     imageAlt: "Nirmitee Studio employee attendance mobile application kiosk interface showcasing facial landmark detection",
   },
+  {
+    id: "project-06",
+    slug: "focusflow-productivity-app",
+    title: "FocusFlow",
+    name: "FocusFlow - Android Productivity & Habit Tracker",
+    category: "Mobile Application",
+    type: "mobile",
+    description: "A high-performance native Android application designed for deep work management, smart habit building, Pomodoro session timers, and real-time productivity analytics.",
+    technologies: ["Kotlin", "Android SDK", "Jetpack Compose", "Room DB", "Coroutines", "Clean Architecture"],
+    image: "/projects/focusflow/cover.png",
+    mobileImage: "/projects/focusflow/cover.png",
+    liveUrl: "https://focusflow.demo.nirmiteestudio.com",
+    caseStudyUrl: "/projects/focusflow-productivity-app",
+    featured: true,
+    metrics: [
+      { label: "Deep Work Sessions", value: "100K+" },
+      { label: "Focus Rate", value: "94%" },
+      { label: "Play Store Rating", value: "4.8 ★" },
+    ],
+    imageAlt: "FocusFlow Android application interface featuring circular Pomodoro timer, task checklist, and deep work analytics dashboard",
+  },
 ];
 

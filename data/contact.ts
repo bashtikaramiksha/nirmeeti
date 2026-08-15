@@ -1,6 +1,12 @@
+export interface PhoneContact {
+  number: string;
+  display: string;
+}
+
 export interface ContactInfo {
   email: string;
   phone: string;
+  phones: PhoneContact[];
   whatsappNumber: string;
   whatsappDisplay: string;
   location: string;
@@ -11,10 +17,14 @@ export interface ContactInfo {
 }
 
 export const contactInfo: ContactInfo = {
-  email: "contact@nirmiteestudio.com",
-  phone: "+91 98765 43210",
-  whatsappNumber: "919876543210",
-  whatsappDisplay: "+91 98765 43210",
+  email: "nirmiteestudio16@gmail.com",
+  phone: "+91 93250 21315",
+  phones: [
+    { number: "919325021315", display: "+91 93250 21315" },
+    { number: "917820875885", display: "+91 78208 75885" },
+  ],
+  whatsappNumber: "919325021315",
+  whatsappDisplay: "+91 93250 21315 / +91 78208 75885",
   location: "Maharashtra, India",
   instagram: "https://instagram.com",
   linkedin: "https://linkedin.com",

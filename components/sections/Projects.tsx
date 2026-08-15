@@ -85,7 +85,12 @@ export function Projects() {
                 <span>{cat.label}</span>
                 {cat.key === "Web Development" && (
                   <span className="ml-1 text-[10px] bg-indigo-500/20 dark:bg-white/20 text-indigo-700 dark:text-white px-1.5 py-0.5 rounded-full font-mono">
-                    4
+                    {PROJECTS.filter((p) => p.category === "Web Application").length}
+                  </span>
+                )}
+                {cat.key === "Mobile & AI" && (
+                  <span className="ml-1 text-[10px] bg-indigo-500/20 dark:bg-white/20 text-indigo-700 dark:text-white px-1.5 py-0.5 rounded-full font-mono">
+                    {PROJECTS.filter((p) => p.category !== "Web Application").length}
                   </span>
                 )}
               </button>

@@ -73,7 +73,7 @@ export async function POST(request: Request) {
 
     // 5. Send Email via Provider if configured, else log to console
     const apiKey = process.env.EMAIL_API_KEY || process.env.RESEND_API_KEY;
-    const recipientEmail = process.env.CONTACT_EMAIL || "contact@nirmiteestudio.com";
+    const recipientEmail = process.env.CONTACT_EMAIL || "nirmiteestudio16@gmail.com";
 
     if (apiKey) {
       // External email provider integration (e.g. Resend / Web3Forms / SendGrid)

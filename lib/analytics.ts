@@ -9,6 +9,7 @@ export type AnalyticsEventName =
   | "project_view_click"
   | "service_contact_click"
   | "whatsapp_click"
+  | "phone_click"
   | "email_click"
   | "contact_form_submit"
   | "contact_form_success";

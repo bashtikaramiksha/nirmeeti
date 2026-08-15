@@ -57,20 +57,30 @@ export const ContactInfo: React.FC = () => {
           </a>
 
           {/* Phone / WhatsApp */}
-          <a
-            href={`tel:${contactInfo.phone.replace(/\s+/g, "")}`}
-            className="group flex items-center gap-4 p-3.5 rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-[#111111] hover:bg-slate-100 dark:hover:bg-[#161616] hover:border-indigo-500/30 transition-all duration-200"
-          >
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500/20">
+          <div className="p-3.5 rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-[#111111] flex items-center gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
               <Phone className="h-5 w-5" />
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-xs text-slate-500 dark:text-zinc-500 font-medium">Call / WhatsApp</div>
-              <div className="text-sm font-semibold text-slate-900 dark:text-white truncate group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">
-                {contactInfo.whatsappDisplay}
+              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm font-semibold">
+                {contactInfo.phones.map((p, idx) => (
+                  <React.Fragment key={p.number}>
+                    <a
+                      href={`tel:+${p.number}`}
+                      onClick={() => trackEvent("phone_click", { sourceLocation: "contact_info" })}
+                      className="text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors"
+                    >
+                      {p.display}
+                    </a>
+                    {idx < contactInfo.phones.length - 1 && (
+                      <span className="text-slate-400 dark:text-zinc-600 font-normal">/</span>
+                    )}
+                  </React.Fragment>
+                ))}
               </div>
             </div>
-          </a>
+          </div>
 
           {/* Location */}
           <div className="flex items-center gap-4 p-3.5 rounded-xl border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-[#111111]">

@@ -108,7 +108,8 @@ const jsonLd = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    email: "contact@nirmiteestudio.com",
+    email: "nirmiteestudio16@gmail.com",
+    telephone: ["+91 93250 21315", "+91 78208 75885"],
     contactType: "customer support",
     availableLanguage: ["English"],
   },
